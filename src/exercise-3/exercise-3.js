@@ -38,7 +38,8 @@ class Statement {
 class Raport {
   async weeklyRidesTotal(startData) {
     const endDate = new Date(startData).addDays(7);
-    return await db.rides.find({ date: { $gte: startData, $lte: endDate } });
+    const weekRange = new DateRange(startData).weekRange;
+    return await db.rides.find({ date: weekRange });
   }
 }
 
@@ -46,6 +47,23 @@ class Bonus {
   async earnedTotal(params = {}) {
     const startData = params.startData || new Date();
     const endDate = params.startData || new Date().subtractDays(1);
-    return await db.bonus.find({ date: { $gte: startData, $lte: endDate } });
+    const range = new DateRange(startData, endDate).range;
+    return await db.bonus.find({ date: range });
+  }
+}
+
+export class DateRange {
+  constructor(startDate, endDate){
+    this.startData = startDate;
+    this.endDate = endDate;
+  }
+
+  get weekRange () {
+    const endDate = new Date(this.startData).addDays(7);
+    return {$gte: this.startData, $lte: endDate};
+  }
+  
+  get range (){
+    return {$gte: this.startData, $lte: this.endDate};
   }
 }

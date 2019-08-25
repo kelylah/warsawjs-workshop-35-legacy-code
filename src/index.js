@@ -1,1 +1,1 @@
-import './exercise-1/index.js';
+import './exercise-3/index.js';
