@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRange check one day range - default 1`] = `
+DateRange {
+  "endDate": 2019-08-04T00:00:00.000Z,
+  "startData": 2019-08-01T00:00:00.000Z,
+}
+`;
+
+exports[`DateRange check range 1`] = `
+Object {
+  "$gte": 2019-08-01T00:00:00.000Z,
+  "$lte": 2019-08-04T00:00:00.000Z,
+}
+`;
+
+exports[`DateRange check weekRange 1`] = `
+Object {
+  "$gte": 2019-08-01T00:00:00.000Z,
+  "$lte": 2019-08-08T00:00:00.000Z,
+}
+`;
