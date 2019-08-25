@@ -5,12 +5,20 @@ class RidesStore {
     console.log('Run prod query:', query);
     return [{ minutes: 3 }, { minutes: 4 }, { minutes: 5 }];
   }
+
+  total(query) {
+    return this.find(query).reduce((total, p)=> total + p.minutes, 0);
+  }
 }
 
 class BonusStore {
   find(query) {
     console.log('Run prod query:', query);
     return [{ minutes: 0 }, { minutes: 1 }, { minutes: 2 }];
+  }
+
+  total(query) {
+    return this.find(query).reduce((total, p)=> total + p.minutes, 0);
   }
 }
 
@@ -31,7 +39,8 @@ export default function app() {
 
 class Statement {
   async ridesTotal(startData, endDate) {
-    return await db.rides.find({ date: { $gte: startData, $lte: endDate } });
+    const range = new DateRange(startData, endDate);
+    return await db.rides.total({ date: range });
   }
 }
 
@@ -48,14 +57,14 @@ class Bonus {
     const startData = params.startData || new Date();
     const endDate = params.startData || new Date().subtractDays(1);
     const range = new DateRange(startData, endDate).range;
-    return await db.bonus.find({ date: range });
+    return await db.bonus.total({ date: range });
   }
 }
 
 export class DateRange {
   constructor(startDate, endDate){
-    this.startData = startDate;
-    this.endDate = endDate;
+    this.endDate = endDate || new Date();
+    this.startData = startDate || new Date(this.endDate).subtractDays(1);
   }
 
   get weekRange () {

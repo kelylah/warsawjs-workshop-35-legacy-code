@@ -15,4 +15,11 @@ describe('DateRange', () => {
 
     expect(range).toMatchSnapshot();
   });
+
+  test('check one day range - default', () => {
+
+    const range = new DateRange(new Date('2019-08-01'), new Date('2019-08-04'));
+
+    expect(range).toMatchSnapshot();
+  });
 });
