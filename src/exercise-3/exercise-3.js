@@ -37,10 +37,14 @@ export default function app() {
   bonus.earnedTotal();
 }
 
-class Statement {
+export class Statement {
+  constructor(db){
+    this.db = db;
+  }
+
   async ridesTotal(startData, endDate) {
     const range = new DateRange(startData, endDate);
-    return await db.rides.total({ date: range });
+    return await this.db.total({ date: range });
   }
 }
 
