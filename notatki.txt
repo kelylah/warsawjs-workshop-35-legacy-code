@@ -1,0 +1,55 @@
+=== 2019-08-25 WarsawJS workshop 35 - Legacy Code
+
+1. Piêkny Grzegorz z Marketingu z prezentacji Sobótki
+2. Prettier traktuje kod jako JS i analizuje tak. S³u¿y tylko do formatowania.
+3. EsLint wyœwietla b³êdy.
+4. Husky - git hookiem - do formatowania kodu przed zacommitowaniem
+5. Ksiazka fowlera 
+   https://refactoring.com/catalog/
+   https://refactoring.guru/
+6. Dobra praktyka z ksi¹¿ki - je¿eli jest wynik to go nazywamy 'result'
+7. Code Smells:
+   https://www.notion.so/Code-smells-04cde7e17caf48eaa7c982b6851c2306
+   https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf
+8. S³owniczek: High Order Function - zwraca lub przyjmuje jako argument inne funkcje
+9. Pojêcie szwów, spoin - zmiana kodu bez wp³ywu na inne modu³y,
+   np. lokalna funkcja, która zmienia dzia³anie
+   S¹ spoiny obiektowe i konsolidacyjne (babel, WebPack)
+   Working with legacy code
+10. Fun, fun, function - jakiœ cz³owiek co siê uczyæ
+11. U¿ycie spoiny - jak mam globaln¹ metodê, której nie mogê wydzieliæ,
+   to mogê w samym teœcie nadpisaæ global.stoarage.hasEntry
+12. Æwiczenie 2: kie³kowanie metody i opakowywanie jej
+13. jsinspect szuka duplikacji w naszym kodzie
+
+
+=== SLACK
+Micha³ Bury:
+1. Nazwa projektu: warsawjs-workshop-35-legacy-code
+2. Projekt trenera:  https://github.com/mbury/warsawjs-workshop-35-legacy-code (odwdziêcz siê i daj gwiazdkê :star2: na GitHubie)
+3. SprawdŸ czy spe³niasz wymagan¹ konfiguracjê opisane w README.
+Kontakt do trenera:
+• https://www.linkedin.com/in/michalbury/
+• https://twitter.com/burymichal
+
+Clean Code quick reference:
+https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf
+
+Code smells:
+https://slack-redir.net/link?url=https%3A%2F%2Fwww.notion.so%2FCode-smells-04cde7e17caf48eaa7c982b6851c2306
+
+Podcast o refactoringu:
+https://devstyle.pl/2017/06/19/devtalk58-o-refactoringu-z-lukaszem-karskim/
+
+Micha³ Bury:
+Czeœæ wszystkim, mam dla was listê materia³ów, które pomog¹ wam dalej zg³êbiaæ temat z wczorajszych warsztatów:
+- Working Effectively with Legacy Code - Michael Feathers - œwietna ksi¹¿ka, w której autor daje gotowe rozwi¹zania na problemy jakie znajdujemy w zastanym kodzie. Jak dla mieni obowi¹zkowa lektura, aby rozwijaæ siê w tym kierunku.
+- Refactoring: Improving the Design of Existing Code - Martin Fowler - katalog technik refaktoryzacyjnych. W druga edycji wszystkie przyk³ady przepisano na Javascript.
+- https://refactoring.guru/refactoring - atrakcyjny wizualnie katalog technik refaktoryzacyjnych i 'code smells' znaleziony przez @£ukasz Mordasiewicz
+- http://industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf - katalog 'code smells' z przyporz¹dkowanymi do nich technikami refaktoryzacyjnymi aby siê z nimi uporaæ.
+- https://www.youtube.com/watch?v=by1wSlYJe8s - wyszukiwanie duplikacji w kodzie
+- https://www.youtube.com/watch?v=xS7UrNPmYX8 - automatyzacja refakotoryzacji, du¿o bardziej zaawansowana ni¿ eslint
+- https://github.com/emilybache/GildedRose-Refactoring-Kata - bardzo znana kata refaktoryzacyjna by poæwiczyæ ró¿ne techniki. Na githubie znajdziecie przyk³ady projektów w których mo¿na zobaczyæ jak inni ludzie sobie z ni¹ radz¹.
+To ju¿ ostatnie przypomnienie o ankietach :slightly_smiling_face: http://bit.ly/warsawjs-workshop-35-ankieta
+Zapraszam równie¿ na mojego linkedina. Je¿eli siê wam podoba³o liczê wpis w zak³adce 'Rekomendacje' https://www.linkedin.com/in/michalbury/.
+Dziêkujê wszystkim za wczorajsz¹ wspóln¹ pracê. Mam nadzieje, ¿e widzimy siê na kolejnych warsztatach :slightly_smiling_face: Jak macie pytania postaram siê odpowiedzieæ.

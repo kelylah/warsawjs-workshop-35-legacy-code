@@ -1,0 +1,12 @@
+from git@github.com:kelylah/warsawjs-workshop-35-legacy-code.git
+Formatowanie i wydzielenie funkcji ze switchem
+[ex1] Wydzielenie funkcji
+[ex1] Snaphot do testu. Zmiana nazwy na result
+[ex1] Wydzielenie wyliczenia volumeCredits
+[ex1] Wydzielenie metody do formatowania
+[ex1] Rozdzielanie pętli - wielokrotne wykonywanie pętli
+[ex1] Wydzielenie do oddzielnej funkcji renderowania komunikatów. Podrzedne funkcje musza zostac bo maja odwolania do parametrow widocznych w zakresie
+[ex1] Zależność metody do renderowania tylko od przygotowanej listy obiektow z danymi
+[ex1] Przesuniecie amountFor do wyliczania danych - jednej petli
+[ex1] Dodanie testu na wydruk HTMLowy
+[ex2] Bajzel. Nieporobione
